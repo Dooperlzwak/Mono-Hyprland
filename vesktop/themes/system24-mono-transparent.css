@@ -1,0 +1,167 @@
+/**
+ * @name system24-mono-transparent
+ * @description System24 theme, monochrome + transparent variant.
+ * @author refact0r (modified by Beckett)
+ * @version 2.0.0
+ */
+
+/* import original theme base */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    --font: 'DM Mono'; 
+    --code-font: 'DM Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    /* spacing + layout */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    /* animations */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    /* top bar */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: on;
+
+    /* transparency + blur */
+    --transparency-tweaks: on;
+    --remove-bg-layer: on;
+    --panel-blur: on;
+    --blur-amount: 12px;
+    --bg-floating: rgba(0,0,0,0.6);
+
+    /* panels + controls */
+    --small-user-panel: on;
+    --unrounding: on;
+
+    /* styling */
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    /* labels */
+    --panel-labels: on;
+    --label-color: var(--text-5);
+    --label-font-weight: 500;
+}
+
+/* === MONOCHROME COLORS === */
+:root {
+    --colors: on;
+
+    /* text */
+    --text-0: #ffffff; /* text on accents */
+    --text-1: #f0f0f0; 
+    --text-2: #d9d9d9; 
+    --text-3: #bfbfbf; 
+    --text-4: #999999; 
+    --text-5: #666666; 
+
+    /* backgrounds */
+    --bg-1: rgba(255,255,255,0.06);
+    --bg-2: rgba(255,255,255,0.04);
+    --bg-3: rgba(0,0,0,0.4);
+    --bg-4: rgba(0,0,0,0.2);
+
+    --hover: rgba(255,255,255,0.08);
+    --active: rgba(255,255,255,0.12);
+    --active-2: rgba(255,255,255,0.18);
+    --message-hover: var(--hover);
+
+    /* accents — neutral grays */
+    --accent-1: #e0e0e0;
+    --accent-2: #bfbfbf;
+    --accent-3: #999999;
+    --accent-4: #777777;
+    --accent-5: #555555;
+    --accent-new: #888888;
+
+    /* mentions/replies */
+    --mention: linear-gradient(to right, rgba(200,200,200,0.2) 40%, transparent);
+    --mention-hover: linear-gradient(to right, rgba(200,200,200,0.3) 40%, transparent);
+    --reply: linear-gradient(to right, rgba(150,150,150,0.2) 40%, transparent);
+    --reply-hover: linear-gradient(to right, rgba(150,150,150,0.3) 40%, transparent);
+
+    /* statuses → grayscale */
+    --online: #cfcfcf;
+    --dnd: #a0a0a0;
+    --idle: #b5b5b5;
+    --streaming: #888888;
+    --offline: #555555;
+
+    /* borders */
+    --border-light: rgba(255,255,255,0.1);
+    --border: rgba(255,255,255,0.2);
+    --border-hover: #ffffff;
+    --button-border: rgba(255,255,255,0.15);
+
+    /* no hue versions of base colors */
+    --red-1: #bbbbbb;
+    --red-2: #aaaaaa;
+    --red-3: #999999;
+    --red-4: #888888;
+    --red-5: #777777;
+
+    --green-1: #bbbbbb;
+    --green-2: #aaaaaa;
+    --green-3: #999999;
+    --green-4: #888888;
+    --green-5: #777777;
+
+    --blue-1: #bbbbbb;
+    --blue-2: #aaaaaa;
+    --blue-3: #999999;
+    --blue-4: #888888;
+    --blue-5: #777777;
+
+    --yellow-1: #bbbbbb;
+    --yellow-2: #aaaaaa;
+    --yellow-3: #999999;
+    --yellow-4: #888888;
+    --yellow-5: #777777;
+
+    --purple-1: #bbbbbb;
+    --purple-2: #aaaaaa;
+    --purple-3: #999999;
+    --purple-4: #888888;
+    --purple-5: #777777;
+}
+
+/* === CLEAR BACKGROUNDS FOR FULL TRANSPARENCY === */
+.appMount_c99875,
+.app__00c92,
+.bg__12180,
+.wrapper__6bf2d,
+.container__590e2 {
+    background: none !important;
+}
+
+.sidebar_a4d4d9,
+.container__11d72,
+.chat__52833,
+.chatContent_f087cb,
+.content__01e65,
+.panels__58331,
+.memberListContainer__0fe24 {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* message bar transparent */
+.channelTextArea_f75fb0,
+.scrollableContainer__74017,
+.themedBackground__74017,
+.inner__74017 {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
