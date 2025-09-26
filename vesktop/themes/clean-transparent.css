@@ -1,0 +1,109 @@
+/**
+ * @name clean transparent
+ * @description Transparent lightweight theme
+ * @author Beckett
+ * @version 1.2.0
+*/
+
+:root {
+    --background-base-lowest: transparent;
+    --background-base-low: transparent;
+    --background-floating: transparent;
+
+    --color-1: #e2ecf2;
+    --color-2: #0E1A2B;
+    --color-3: #21709B;
+    --color-4: #506E8B;
+    --color-5: #47A2B6;
+    --color-6: #BCB4A3;
+    --color-7: #E3CAA8;
+    --color-8: #F2D6B0;
+    --color-9: #e2ecf2;
+
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--color-1), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--color-1), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--color-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--color-3), transparent 95%) 40%, transparent);
+}
+
+/* --- Wipe backgrounds without touching layout --- */
+.theme-dark, .theme-darker,
+.container_c8ffbb, .members_c8ffbb,
+.container__2637a,
+.chatContent_f75fb0,
+.sidebarList_c48ade,
+.panels_c48ade,
+.privateChannels__35e86, .scroller__99e7c,
+.chat_f75fb0,
+.appMount__51fd7, body {
+    background: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Remove gray gradients */
+.children__9293f:after,
+.chatGradient__36d07,
+.sidebar_c48ade:after {
+    background: none !important;
+}
+
+/* --- Keep channel/member transparency --- */
+.member_c8ffbb {
+    background: none;
+    border: none;
+}
+
+/* --- Scrollbars invisible --- */
+::-webkit-scrollbar {
+    background: transparent;
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* --- Remove icons you don’t want --- */
+.icon_d98031,
+[aria-label="Notification Settings"],
+.avatarWrapper__37e49,
+.button__85643,
+.button__74017,
+.buttonContainer_e6e74f,
+[href="/library"], [href="/store"], [href="/shop"] {
+    display: none !important;
+}
+
+/* --- Text + highlight colors --- */
+::placeholder {
+    color: var(--color-8);
+}
+.text_b88801 > strong { color: var(--color-1); }
+.replying__5126c:before { background-color: var(--color-2) !important; }
+.newMessagesBar__0f481 { background-color: var(--color-5); }
+::selection, .highlight {
+    background: var(--color-3);
+    color: var(--color-0);
+}
+
+/* --- Settings transparency --- */
+.standardSidebarView__23e6b,
+.contentRegion__23e6b,
+.sidebarRegionScroller__23e6b,
+.contentRegionScroller__23e6b,
+.tabBody__133bf,
+.container__133bf {
+    background: none !important;
+    border: none !important;
+}
+
+/* --- Message bar transparent --- */
+.channelTextArea_f75fb0,
+.scrollableContainer__74017,
+.themedBackground__74017,
+.inner__74017 {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
